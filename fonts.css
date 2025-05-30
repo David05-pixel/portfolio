@@ -1,0 +1,12 @@
+/* Fallback fonts */
+@font-face {
+    font-family: 'Space Grotesk';
+    src: local('Verdana'), local('Geneva');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: local('Verdana'), local('Geneva');
+    font-weight: 700;
+}

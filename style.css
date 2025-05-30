@@ -1,0 +1,298 @@
+/* Custom fonts */
+
+html{
+    scroll-behavior: smooth;
+}
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/blue-smooth-wall-textured-background.jpg");
+}
+
+/* Particles.js */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Neumorphic Shadow */
+.shadow-neumorphic {
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.dark .shadow-neumorphic {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), -2px -2px 6px rgba(255, 255, 255, 0.05);
+}
+
+/* Skill Bars */
+.skill-bar {
+    height: 24px;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.skill-bar div {
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.875rem;
+    line-height: 24px;
+}
+/* Custom Colors */
+.bg-navy-800 {
+    background-color: #2d552e; /* Deep forest green */
+}
+
+.bg-navy-900 {
+    background-color: #1a3c34; /* Dark pine green */
+}
+
+.text-navy-900 {
+    color: #1a3c34; /* Dark pine green for text */
+}
+
+.bg-coral-100 {
+    background-color: #e6f4ea; /* Soft mint green */
+}
+
+.bg-coral-500 {
+    background-color: #10b981; /* Vibrant emerald green */
+}
+
+.text-coral-500 {
+    color: #10b981; /* Vibrant emerald green, replacing #08c256 */
+}
+
+.bg-coral-600 {
+    background-color: #059669; /* Deep emerald green for hover */
+}
+
+.text-coral-400 {
+    color: #34d399; /* Light lime green */
+}
+
+.bg-gold-400 {
+    background-color: #84cc16; /* Bright lime green */
+}
+
+.bg-green-500 {
+    background-color: #22c55e; /* Existing skill bar green, kept for consistency */
+}
+
+.bg-green-600 {
+    background-color: #16a34a; /* Existing skill bar hover green, kept */
+}
+/* Animations */
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Card improvements */
+.bg-white, .bg-coral-100, .dark .bg-navy-800, .dark .bg-navy-900 {
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px 0 rgba(16, 185, 129, 0.08);
+    padding: 2rem 1.5rem;
+}
+
+/* Project Apps and Images */
+.project img {
+    max-width: 100%;
+    height: 192px;
+    object-fit: cover;
+    margin: 0 auto;0.75rem;
+    border-radius: 8px;;
+    transition: transform 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+}
+
+.todo-app, .calculator {
+    position: relative;
+}
+
+.todo-app ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background 0.3s ease;
+}
+
+.todo-app ul li.completed {
+    background: #d1fae5;
+    text-decoration: line-through;
+}
+
+.todo-app button, .calculator button {
+    transition: background-color 0.3s ease;
+}
+
+/* Button improvements */
+button, .btn, .bg-coral-500, .bg-green-500 {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px 0 rgba(16, 185, 129, 0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:active, .btn:active {
+    transform: scale(0.97);
+}
+
+/* Input improvements */
+input, textarea {
+    border: 1.5px solid #e5e7eb;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+}
+
+/* Text color improvements */
+.text-gray-600, .text-gray-500 {
+    color: #334155 !important;
+}
+
+.dark .text-gray-600, .dark .text-gray-500 {
+    color: #e0e7ef !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        height: 70vh;
+    }
+    .hero h2 { ul {
+        font-size: 3.5rem;lumn;
+    }   gap: 1rem;
+    .hero p {align: center;
+        font-size: 1.5rem;
+    }hero {
+}       height: 60vh;
+    }
+@media (max-width: 768px) {
+    header nav ul {te-columns: 1fr;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .hero {t .todo-app, .project .calculator {
+        height: 60vh;875rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }a (max-width: 480px) {
+    .project img {
+        height: 160px;5rem;
+    }
+    .project .todo-app, .project .calculator {
+        font-size: 0.875rem;
+    }
+}   .hero a {
+        padding: 0.75rem 1.5rem;
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2.25rem;
+    }
+    .hero p {img {
+        font-size: 1rem;       height: 120px;
+    }    }
+    .hero a {or button {
+        padding: 0.75rem 1.5rem;
+    }   font-size: 0.75rem;
+    h2 {
+        font-size: 2rem;
+    }
+    .project img {* Glassmorphism for Cards */
+}
+.bg-white {
+rgba(255, 255, 255, 0.9); 255, 255, 0.9);
+/* Typography improvements */x);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;er', 'Poppins', 'Montserrat', sans-serif;
+}   line-height: 1.6;dark .bg-white {
+    letter-spacing: 0.01em;    font-weight: 700;30, 58, 138, 0.9);
+    background-color: #f8fafc;letter-spacing: 0.02em;2px);
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1.5rem;
+    font-family:  'Poppins', 'Montserrat', sans-serif;
+line-height: 1.6;
+    letter-spacing: 0.01em;
+    background-color: #f8fafc;
+    margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+footer {
+    background: #1a3c34;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer svg {
+    width: 2rem;
+    height: 2rem;
+    transition: color 0.2s;
+}
+
+footer svg:hover {
+    color: #10b981;
+}

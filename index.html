@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Iyanuoluwa Oluwapelumi - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Typed.js for hero text animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-teal-50 to-white text-gray-900 font-inter transition-colors duration-500 dark:bg-gradient-to-br dark:from-gray-900 dark:to-navy-900 dark:text-white"
+  >
+  
+    <!-- Header -->
+    <header class="bg-teal-600 text-white p-4 shadow-lg sticky top-0 z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-montserrat font-bold">
+          David Iyanuoluwa Oluwapelumi
+        </h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <li>
+              <a
+                href="#about"
+                class="hover:text-coral-400 transition-colors duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="hover:text-coral-400 transition-colors duration-300"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="hover:text-coral-400 transition-colors duration-300"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="hover:text-coral-400 transition-colors duration-300"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-coral-400 transition-colors duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="hero bg-cover bg-center h-screen flex items-center justify-center relative"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url('images/blue-smooth-wall-textured-background.jpg');
+      "
+    >
+      <div class="container mx-auto text-center text-white animate-slide-up">
+        <h2 class="text-5xl md:text-6xl font-montserrat font-bold mb-4">
+          Hello, I'm <span class="text-coral-400">David</span>
+        </h2>
+        <p class="text-xl md:text-2xl mb-6"><span id="typed-text"></span></p>
+        <a
+          href="#projects"
+          class="bg-coral-500 text-white px-8 py-3 rounded-full hover:bg-coral-600 transition-transform transform hover:scale-105"
+          >Explore My Work</a
+        >
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container mx-auto py-16 section">
+      <h2
+        class="text-4xl font-montserrat font-bold text-center mb-8 text-teal-700 "
+      >
+        About Me
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-teal-700 p-6 py-10 rounded-xl shadow-lg text-white backdrop-blur-sm "
+        >
+          <p class="mb-4 text-white">
+            I'm a passionate Information Technology student from New Horizons
+            ICT, dedicated to crafting responsive and dynamic web experiences.
+          </p>
+          <p><strong>Matric Number:</strong> 2024/13752</p>
+          <p><strong>Department:</strong> Information Technology</p>
+          <p><strong>Phone Number:</strong> 08034029907</p>
+          <p class="mt-4">
+            My goal is to become a Senior Frontend Developer, driving innovation
+            in web development.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="assets/profile.jpg"
+            alt="Profile Photo"
+            class="w-3/4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="container mx-auto py-16 bg-gray-50 dark:bg-navy-900 section"
+    >
+      <h2
+        class="text-4xl font-montserrat font-bold text-center mb-8 text-teal-700 dark:text-teal-300"
+      >
+        Projects
+      </h2>
+      <select
+        onchange="filterProjects(this.value)"
+        class="mb-6 p-3 border rounded-lg bg-white shadow-sm w-40 mx-auto focus:outline-none focus:ring-2 focus:ring-teal-500"
+      >
+        <option value="all">All</option>
+        <option value="js">JavaScript</option>
+      </select>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="project bg-white dark:bg-navy-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          data-category="js"
+        >
+          <h3
+            class="text-xl font-montserrat font-bold text-teal-600 dark:text-teal-300"
+          >
+            To-Do List
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            A dynamic task manager with local storage support.
+          </p>
+          <img
+            src="./images/to-do list.png"
+            alt="To-Do List Demo"
+            class="w-full mt-2 rounded-lg object-cover h-full py-4"
+          />
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Technologies: HTML, CSS, JavaScript
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Role: Designed and developed a responsive task management app.
+          </p>
+          <div class="mt-2 flex space-x-4">
+            <a href="./projects/to-do-list/index.html" class="text-coral-500 hover:underline">Live Demo</a>
+            <a href="https://github.com/sahandghavidel/HTML-CSS-JavaScript-projects-for-beginners/tree/main/projects/to-do-list" class="text-coral-500 hover:underline">Code</a>
+          </div>
+        </div>
+        <div
+          class="project bg-white dark:bg-navy-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          data-category="js"
+        >
+          <h3
+            class="text-xl font-montserrat font-bold text-teal-600 dark:text-teal-300"
+          >
+            Loan Calculator
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            A sleek calculator for arithmetic operations.
+          </p>
+          <img
+            src="./images/loan-calculator.png"
+            alt="Calculator Demo"
+            class="w-full mt-2 rounded-lg object-cover h-48 py-4 mt-4"
+          />
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+            Technologies: HTML, CSS, JavaScript
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Role: Built arithmetic logic with a responsive UI.
+          </p>
+          <div class="mt-2 flex space-x-4">
+            <a href="./projects/loan-calaculator/index.html" class="text-coral-500 hover:underline">Live Demo</a>
+            <a href="https://github.com/sahandghavidel/HTML-CSS-JavaScript-projects-for-beginners/tree/main/projects/loan-calculator" class="text-coral-500 hover:underline">Code</a>
+          </div>
+        </div>
+            <div
+          class="project bg-white dark:bg-navy-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          data-category="js"
+        >
+          <h3
+            class="text-xl font-montserrat font-bold text-teal-600 dark:text-teal-300"
+          >
+            Image Search App
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            A sleek calculator for arithmetic operations.
+          </p>
+          <img
+            src="./images/image-search.png"
+            alt="Image Search App Demo"
+            class="w-full mt-2 rounded-lg object-cover h-48 py-4 mt-4"
+          />
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+            Technologies: HTML, CSS, JavaScript
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Role: Built arithmetic logic with a responsive UI.
+          </p>
+          <div class="mt-2 flex space-x-4">
+            <a href="./projects/Image-search-app/index.html" class="text-coral-500 hover:underline">Live Demo</a>
+            <a href="https://github.com/sahandghavidel/HTML-CSS-JavaScript-projects-for-beginners/tree/main/projects/image-search-app" class="text-coral-500 hover:underline">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto py-16 section">
+      <h2
+        class="text-4xl font-montserrat font-bold text-center mb-8 text-teal-700 dark:text-teal-300"
+      >
+        Skills
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h3
+            class="font-montserrat font-bold text-lg text-gray-700 dark:text-gray-200"
+          >
+            Languages
+          </h3>
+          <div
+            class="skill-bar bg-gray-200 dark:bg-navy-700 rounded-full h-6 mb-8 mt-4 overflow-hidden"
+          >
+            <div
+              class="bg-teal-500 h-full text-white text-center text-sm font-medium"
+              style="width: 85%; transition: width 1s ease-in-out"
+            >
+              HTML
+            </div>
+          </div>
+          <div
+            class="skill-bar bg-gray-200 dark:bg-navy-700 rounded-full h-6 mb-8 overflow-hidden"
+          >
+            <div
+              class="bg-teal-500  h-full text-white text-center text-sm font-medium"
+              style="width: 75%; transition: width 1s ease-in-out"
+            >
+              CSS
+            </div>
+          </div>
+          <div
+            class="skill-bar bg-gray-200 dark:bg-navy-700 rounded-full h-6 mb-8 overflow-hidden"
+          >
+            <div
+              class="bg-teal-500 h-full text-white text-center text-sm font-medium"
+              style="width: 65%; transition: width 1s ease-in-out"
+            >
+              JavaScript
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3
+            class="font-montserrat font-bold text-lg text-gray-700 dark:text-gray-200"
+          >
+            Design Tools
+          </h3>
+          <div
+            class="skill-bar bg-gray-200 dark:bg-navy-700 rounded-full h-6 mb-4 overflow-hidden"
+          >
+            <div
+              class="bg-coral-500 h-full text-white text-center text-sm font-medium"
+              style="width: 55%; transition: width 1s ease-in-out"
+            >
+              Figma
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ <section id="experience" class="container mx-auto py-16 w-fit section">
+  <h2 class="text-4xl font-space-grotesk font-bold text-center mb-8 text-coral-500 dark:text-coral-400">
+    Experience
+  </h2>
+  <ul class="space-y-6">
+    <li class="bg-coral-100 dark:bg-navy-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+      <h3 class="font-space-grotesk font-bold text-lg text-coral-600 dark:text-coral-400">
+        Google
+      </h3>
+      <p class="text-navy-900 dark:text-mint-100">Software Engineer Intern &mdash; Jun 2023 - Sep 2023</p>
+      <p class="text-navy-900 dark:text-mint-100">
+        Collaborated with a team to develop new features for Google Drive using React and TypeScript. Improved file upload performance by 20% and contributed to UI accessibility enhancements.
+      </p>
+    </li>
+    <li class="bg-coral-100 dark:bg-navy-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+      <h3 class="font-space-grotesk font-bold text-lg text-coral-600 dark:text-coral-400">
+        Microsoft
+      </h3>
+      <p class="text-navy-900 dark:text-mint-100">Frontend Developer &mdash; Jan 2022 - May 2023</p>
+      <p class="text-navy-900 dark:text-mint-100">
+        Built and maintained components for Microsoft Teams using HTML, CSS, and JavaScript. Led a redesign project that improved user engagement by 15%.
+      </p>
+    </li>
+    <li class="bg-coral-100 dark:bg-navy-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+      <h3 class="font-space-grotesk font-bold text-lg text-coral-600 dark:text-coral-400">
+        New Horizons ICT Resource Center
+      </h3>
+      <p class="text-navy-900 dark:text-mint-100">Student &mdash; 2024-2025</p>
+      <p class="text-navy-900 dark:text-mint-100">
+        Completed Advanced Frontend Certification Course, building multiple responsive web projects and collaborating with peers on real-world assignments.
+      </p>
+    </li>
+  </ul>
+</section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="container mx-auto py-16 section">
+      <h2
+        class="text-4xl font-montserrat font-bold text-center mb-8 text-teal-700 dark:text-teal-300"
+      >
+        Contact Me
+      </h2>
+      <form action="https://formsubmit.co/miraculousdavid07@gmail.com" method="POST" id="contactForm" class="max-w-lg mx-auto space-y-4">
+        <input
+          type="text"
+          id="name"
+          placeholder="Name"
+          required
+          class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-navy-800 dark:border-gray-600 dark:text-white"
+          aria-label="Name"
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          required
+          name="email"
+          class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-navy-800 dark:border-gray-600 dark:text-white"
+          aria-label="Email"
+        />
+        <textarea
+          id="message"
+          placeholder="Message"
+          required
+          name="message"
+          class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-navy-800 dark:border-gray-600 dark:text-white"
+          rows="4"
+          aria-label="Message"
+        ></textarea>
+        <button
+          type="submit"
+          name="submit"
+          class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-coral-600 transition-transform transform hover:scale-105 w-full"
+        >
+          Send Message
+        </button>
+        <div id="feedback" class="text-center text-sm"></div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-800 text-white p-6 text-center">
+      <p id="date" class="text-sm">Date: May 30, 2025, 09:50 AM WAT</p>
+      <p class="text-sm">
+        © 2025 David Iyanuoluwa Oluwapelumi. All rights reserved.
+      </p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="#" aria-label="GitHub"
+          ><svg
+            class="w-6 h-6 hover:text-coral-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.49v-1.7c-2.78.61-3.36-1.34-3.36-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.67.94.67 1.89v2.8c0 .27.16.58.67.49A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"
+            /></svg
+        ></a>
+        <a href="#" aria-label="LinkedIn"
+          ><svg
+            class="w-6 h-6 hover:text-coral-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V10h3v9zm-1.5-10.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 10.5h-3v-5.5c0-1.38-.02-3.15-1.92-3.15-1.92 0-2.21 1.5-2.21 3.05V19h-3V10h2.88v1.23h.04c.4-.76 1.38-1.56 2.83-1.56 3.03 0 3.59 2 3.59 4.61V19z"
+            /></svg
+        ></a>
+      </div>
+      <button
+        id="backToTop"
+        class="hidden mt-4 bg-coral-500 text-white px-6 py-2 rounded-full hover:bg-coral-600 transition-transform transform hover:scale-105"
+      >
+        Back to Top
+      </button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
